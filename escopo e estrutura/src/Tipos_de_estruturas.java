@@ -4,7 +4,6 @@ public class Tipos_de_estruturas{
         Estruturas condicionais: if-else, switch-case
         EStruturas de repetição: for,while, do-while
         Estruturas de exceções: try-catch-finally
-
          */
 
 
