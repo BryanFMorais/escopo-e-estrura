@@ -12,7 +12,6 @@ public class CondicoesSimples {
 
         if(valorSolicitado < saldo)
             saldo = saldo - valorSolicitado;
-        else System.out.println("Saldo insuficiente na conta");
         System.out.println(saldo);
 
 
