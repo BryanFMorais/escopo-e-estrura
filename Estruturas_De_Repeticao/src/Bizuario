@@ -1,0 +1,63 @@
+﻿
+anotações:
+    array e um conjunto de elementos de um tipo correspondente
+    em arrays o indice de elementos inicia em 0
+    lenght quer dizer tamanho
+
+--
+For (para)
+While (enquanto)
+Do While (faça enquanto)
+--
+
+For:
+define na própria chamada a variável contadora, a condição de parada e o incremento a cada iteração.
+EX: for (bloco de inicialização; expressão booleana de validação; bloco de atualização)
+{
+comando que será executado até que a
+expressão de validação torne-se falsa
+}
+
+For/Each
+esta fortmente realcionado com um cenario onde
+contenha um array ou coleção, e assim, a interação é baseada aos elementos da coleção.
+
+--
+Break e continue
+
+Break (quebrar/interromper)
+ele faz o java parar
+
+Continue (continuar)
+ele "continua" o laço
+
+o break interrompe o laço, o continue interrompe somente a iteração atual.
+
+--
+
+While
+o laço while (enquanto) determina que enquanto uma condição for válida, o bloco de código será exeecutado.
+o laço testa a condição antes de executar o código, logo, caso a condição seja inválida no primeiro teste o bloco nem será executado.
+
+//estrutura de controle do de fluxo while
+
+while (expressao booleana de validação)
+{
+comando que será executado até que a
+expressão de validação torne-se falsa
+}
+
+--
+Do While (faça enquanto)
+assim como o laço while, considera que enquanto uma determinada condição for válida o bloco de código será executado.
+Entretanto, do/While testa a condição após executar o código, sendo assim, mesmo que a condição seja considerada inválida no primeiro teste
+o bloco sera executado pelo menos uma vez.
+
+//estrutura do controle de fluxo do while
+
+do
+{
+//comando que será executado até que a
+//expressão de validação torne-se falsa
+}
+while (expressão booleana de validação);
