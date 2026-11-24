@@ -1,0 +1,16 @@
+﻿exceções:
+ao executar o código java, diferentes erros podem acontecer: erro de codificação feitos pelo programador,
+ erros devido a entrada errada ou outros imprevistos.
+
+ quando ocorre um erro, o java normalmente gera uma mensagem de erro. O termo Técnico para isso é:
+ Java lanlará uma exceção (Jogará um erro).
+
+ de forma intepretativa em java, um erro e algo irreparavale , a aplicação trava ou e enxcerrada
+  drasticamente. já exceções é um fluxo inesperado da nossa aplicação.
+ EX: querer dividir por zer, querer abrir um arquivo que não existe, abrir uma conexão de bamnco com um
+ usuario ou senha invalido.
+ Todos estes cenarios e os demais não são erros mas sim fluxos não previstos pela aplicação.
+
+ é ai que entra mauis uma responsabilidade do desenvolvedor, prever situações iguais a estas e
+ realizar o que *denominamos de Tratamento de Exceções*
+
