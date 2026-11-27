@@ -1,0 +1,148 @@
+﻿O sistema deverá receber dois parâmetros via terminal que representarão dois números inteiros, com estes dois números você deverá obter a quantidade de interações (for) e realizar a impressão no console (System.out.print) dos números incrementados, exemplo:
+
+Se você passar os números 12 e 30, logo teremos uma interação (for) com 18 ocorrências para imprimir os números, exemplo: "Imprimindo o número 1", "Imprimindo o número 2" e assim por diante.
+Se o primeiro parâmetro for MAIOR que o segundo parâmetro, você deverá lançar a exceção customizada chamada de ParametrosInvalidosException com a segunda mensagem: "O segundo parâmetro deve ser maior que o primeiro"
+Crie o projeto DesafioControleFluxo
+Dentro do projeto, crie a classe Contador.java para realizar toda a codificação do nosso programa.
+Dentro do projeto, crie a classe ParametrosInvalidosException que representará a exceção de negócio no sistema.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//imports
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class ProcessoSeletivo3 {
+    public static void main(String[] args) {
+
+        System.out.println("Processo seletivo");
+        String[] candidatos = {"Felipe","Marcia","Nicolas","Bryan","Lucas"};
+        for (String candidato: candidatos){
+            entrandoEmContato(candidato);
+        }
+    }
+
+    static void entrandoEmContato(String candidato){
+        int tentativasRealizadas = 1;
+        boolean continuarTentando = true;
+        boolean atendeu = false;
+        do{
+
+            //elas precisam sofrer alteração
+            atendeu = atender();
+            continuarTentando = !atendeu;
+            if (continuarTentando)
+                tentativasRealizadas++;
+            else
+                System.out.println("contato realiado com sucesso");
+
+        }while (continuarTentando && tentativasRealizadas <3);
+        if (atendeu)
+            System.out.println("conseguimos contato com " + candidato + " na "+ tentativasRealizadas + " tentativa");
+        else
+            System.out.println("nao conseguimos entrar em contato com " + candidato + " numero maximo de tentativas " + tentativasRealizadas + " realizadas ");
+    }
+
+    //metodo autender
+    static boolean atender(){
+        return new Random().nextInt(3)==1;
+    }
+
+
+    static void imprimirSelecionados(){
+        String[] candidatos = {"Felipe","Marcia","Nicolas","Bryan","Lucas"};
+        System.out.println("imprimindo a lista de candidatos informando o indice do elemento");
+        for(String candidato: candidatos){
+            System.out.println("o candidato selecionado foi "+ candidato);
+        }
+
+    }
+
+    //me da um numero aleatorio de 1800 a 2200
+    static double valorPretendido(){
+        return ThreadLocalRandom.current().nextDouble(1800,2200);
+    }
+
+    //e a seleção de candidatos. enquanto n chega a 5 pessoas ele n para
+    static String selecaoCandidatos(){
+
+        String[] candidatos = {"Felipe","Marcia","Nicolas","Bryan","Lucas","Jeffrey","Maicon"," Gustavo","Julia","Ana Clara","Wendell","Janaina"};
+
+        int candidatosSelecionados = 0;
+        int candidatosAtual=0;
+        double salarioBase =2000.0;
+         while (candidatosSelecionados < 5 && candidatosAtual < candidatos.length){
+            String candidato = candidatos[candidatosAtual];
+            double salarioPretendido = valorPretendido();
+
+            if (salarioBase >= salarioPretendido ){
+                candidatosSelecionados++;
+            }
+            candidatosAtual++;
+        }
+    }
+
+    //fase de ligar para candidato
+    static void analisarCandidato(double salarioPretendido){
+        double salarioBase = 2000.0;
+        if(salarioBase > salarioPretendido){
+            System.out.println("ligar para o candidato");
+        }
+        else if (salarioBase == salarioPretendido) {
+            System.out.println("Ligar para o usuario para contra proprosta");
+        }
+
+        else{
+            System.out.println("Aguardando o resultado dos demais candidatos");
+        }
+    }
+}
+
